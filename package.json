@@ -1,6 +1,6 @@
 {
   "name": "fresh-cert",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module for loading SSL cert files and starting a secure server",
   "main": "index.js",
   "scripts": {
