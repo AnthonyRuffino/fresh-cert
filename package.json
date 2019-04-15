@@ -1,0 +1,25 @@
+{
+  "name": "fresh-cert",
+  "version": "1.0.0",
+  "description": "Module for loading SSL cert files and starting a secure server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyRuffino/fresh-cert.git"
+  },
+  "keywords": [
+    "ssl",
+    "tls",
+    "certificate",
+    "cert"
+  ],
+  "author": "Anthony Ruffino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnthonyRuffino/fresh-cert/issues"
+  },
+  "homepage": "https://github.com/AnthonyRuffino/fresh-cert#readme"
+}
