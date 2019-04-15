@@ -3,6 +3,7 @@
 
 class FreshCert {
   constructor({
+    router,
     sslKeyFile,
     sslDomainCertFile,
     sslCaBundleFile,
@@ -15,9 +16,10 @@ class FreshCert {
     this.sslDomainCertFile = sslDomainCertFile;
     this.sslCaBundleFile = sslCaBundleFile;
     this.enforceHttps = enforceHttps;
+    this.router = router;
   }
 
-  getSecureServer(router) {
+  getSecureServer() {
     const info = '[[FRESH-CERT]]   ';
     console.log(info + 'configuring SSL with fresh-cert...');
     console.log(info + 'https://github.com/AnthonyRuffino/fresh-cert');
@@ -25,6 +27,7 @@ class FreshCert {
     console.trace(info + 'sslDomainCertFile: ' + this.sslDomainCertFile);
     console.trace(info + 'sslCaBundleFile: ' + this.sslCaBundleFile);
     
+    let router = this.router;
     let https = this.https;
     let certFileEncoding = 'utf8';
 
@@ -85,6 +88,6 @@ class FreshCert {
   }
 }
 
-module.exports = function(config, router) {
-	return (new FreshCert(config)).getSecureServer(router);
+module.exports = function(config) {
+	return (new FreshCert(config)).getSecureServer();
 }
